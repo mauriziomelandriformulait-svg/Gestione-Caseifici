@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL0101 - Gestione Caseifici</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            color: #000;
+            margin: 0;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .window-header {
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        /* Sezione Superiore */
+        .top-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="number"] {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #999;
+            padding: 2px 4px;
+            background-color: #fff;
+        }
+
+        .bg-blue {
+            background-color: #0056b3 !important;
+            color: #fff;
+        }
+
+        /* Griglia Documenti e Movimenti */
+        .grid-docs {
+            display: grid;
+            grid-template-columns: 120px 80px auto 200px;
+            row-gap: 6px;
+            column-gap: 10px;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .grid-header {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        /* Sezione Produttori */
+        .produttori-section {
+            margin-bottom: 25px;
+        }
+
+        .produttori-section input {
+            width: 60px;
+            text-align: right;
+        }
+
+        /* Griglia Parametri Analisi */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 60px repeat(6, 110px);
+            row-gap: 8px;
+            column-gap: 15px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .param-header {
+            background-color: #008080;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            font-size: 13px;
+        }
+
+        .analysis-grid label {
+            text-align: left;
+        }
+
+        .analysis-grid input {
+            width: 100%;
+            text-align: right;
+        }
+
+        /* Barra Inferiore delle Azioni */
+        .footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #008080;
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 14px;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bar input[type="text"] {
+            width: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .help-box {
+            background-color: #fff;
+            color: #008080;
+            padding: 0 5px;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="window-header">GL0101</div>
+
+    <div class="container">
+        
+        <div class="top-section">
+            <span style="margin-right: 10px;">Cat. merceologica primo acquirente :</span>
+            <input type="text" value="LATTE" class="bg-blue" style="width: 55px; text-align: center;" readonly>
+            <span style="margin-left: 20px;">Art.latte primo acquirente</span>
+        </div>
+
+        <div class="grid-docs">
+            <div class="grid-header"></div>
+            <div class="grid-header"><u>Tipi documento</u></div>
+            <div class="grid-header"></div>
+            <div class="grid-header"><u>Tipi movimento</u></div>
+
+            <div>Analisi</div>
+            <div><input type="text" value="ANA" style="width: 45px;"></div>
+            <div>Analisi latte</div>
+            <div></div>
+
+            <div>Registri</div>
+            <div><input type="text" value="REG" style="width: 45px;"></div>
+            <div>Registri di carico d</div>
+            <div></div>
+
+            <div>Fatture</div>
+            <div><input type="text" value="PRFL" style="width: 45px;"></div>
+            <div>Fatture d'acquisto l</div>
+            <div><input type="text" value="5FL" style="width: 40px;"> Fattura latte</div>
+
+            <div>Autofatture</div>
+            <div><input type="text" value="PRAF" style="width: 45px;"></div>
+            <div>Autofatture d'acquis</div>
+            <div><input type="text" value="5FL" style="width: 40px;"> Fattura latte</div>
+
+            <div>Riten.Cee</div>
+            <div><input type="text" value="CG1" style="width: 45px;"></div>
+            <div>Contabilita' general</div>
+            <div><input type="text" value="900" style="width: 40px;"> GIROCONTO</div>
+
+            <div>Controp.Cee</div>
+            <div style="grid-column: span 3;">
+                <input type="text" value="9010001" style="width: 80px;"> 
+                <span style="margin-left: 10px;">VENDITE PRODOTTI FINITI ITALIA</span>
+            </div>
+        </div>
+
+        <div class="produttori-section">
+            <span>Numero produttori in dichiarazione mensile:</span>
+            <input type="number" value="15">
+        </div>
+
+        <div class="analysis-grid">
+            <div></div>
+            <div class="param-header">Ps.</div>
+            <div class="param-header">SH</div>
+            <div class="param-header">Grasso%</div>
+            <div class="param-header">Proteine%</div>
+            <div class="param-header">D/Crios.</div>
+            <div class="param-header">H2O%</div>
+
+            <label>Min</label>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,0"></div>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,000"></div>
+            <div><input type="text" value="0,00"></div>
+
+            <label>Max</label>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,0"></div>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,00"></div>
+            <div><input type="text" value="0,000"></div>
+            <div><input type="text" value="0,00"></div>
+        </div>
+
+        <div class="analysis-grid">
+            <div></div>
+            <div class="param-header">Na</div>
+            <div class="param-header">Inibenti</div>
+            <div class="param-header">Lattosio%</div>
+            <div class="param-header">Res.S/M</div>
+            <div class="param-header">Cell/ml</div>
+            <div class="param-header">Car.Batt.</div>
+
+            <label>Min</label>
+            <div><input type="text" value="0,000
