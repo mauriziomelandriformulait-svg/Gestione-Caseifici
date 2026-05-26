@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL0201 - Analisi Latte</title>
+    <title>GL0201 - Gestione Analisi Latte</title>
     <style>
         body {
             background-color: #ffffff;
@@ -33,6 +33,16 @@
             padding: 15px;
         }
 
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #0284c7;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+        }
+
         .row {
             display: flex;
             align-items: center;
@@ -58,9 +68,9 @@
             color: #000000;
         }
 
-        /* Etichette evidenziate in teal */
-        .teal-label {
-            background-color: #008080;
+        /* Etichette evidenziate in azzurro */
+        .blue-label {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 4px;
             display: inline-block;
@@ -88,7 +98,7 @@
 
         /* Footer / Barra dei comandi */
         .footer-bar {
-            background-color: #008080;
+            background-color: #0284c7;
             color: #ffffff;
             padding: 4px 8px;
             display: flex;
@@ -102,7 +112,7 @@
         }
 
         .help-box {
-            background-color: #008080;
+            background-color: #0284c7;
             color: #ffffff;
             border: 1px solid #ffffff;
             padding: 0 5px;
@@ -116,6 +126,9 @@
     <div class="window-header">GL0201</div>
 
     <div class="window-content">
+        
+        <div class="main-title">Gestione Analisi Latte</div>
+
         <div class="row">
             <span style="width: 140px;">Tipo/Se Prec.:</span>
             <input type="text" value="ANA" style="width: 40px; text-align: center;">
@@ -150,54 +163,54 @@
 
         <div class="metrics-grid">
             <div class="metric-box">
-                <div class="teal-label" style="width: 45px;">Ps.</div><br>
+                <div class="blue-label" style="width: 45px;">Ps.</div><br>
                 <input type="text" value="0,00">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 30px;">SH</div><br>
+                <div class="blue-label" style="width: 30px;">SH</div><br>
                 <input type="text" value="0,0">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 75px;">Grasso%</div><br>
+                <div class="blue-label" style="width: 75px;">Grasso%</div><br>
                 <input type="text" value="0,00">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 85px;">Proteine%</div><br>
+                <div class="blue-label" style="width: 85px;">Proteine%</div><br>
                 <input type="text" value="0,00">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 85px;">D/Crios.</div><br>
+                <div class="blue-label" style="width: 85px;">D/Crios.</div><br>
                 <input type="text" value="0,000">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 50px;">H2O%</div><br>
+                <div class="blue-label" style="width: 50px;">H2O%</div><br>
                 <input type="text" value="0,00">
             </div>
         </div>
 
         <div class="metrics-grid">
             <div class="metric-box">
-                <div class="teal-label" style="width: 30px;">Na</div><br>
+                <div class="blue-label" style="width: 30px;">Na</div><br>
                 <input type="text" value="0,000">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 85px;">Inibenti</div><br>
+                <div class="blue-label" style="width: 85px;">Inibenti</div><br>
                 <input type="text" value="N" style="text-align: center;">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 85px;">Lattosio%</div><br>
+                <div class="blue-label" style="width: 85px;">Lattosio%</div><br>
                 <input type="text" value="0,00">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 75px;">Res.S/M</div><br>
+                <div class="blue-label" style="width: 75px;">Res.S/M</div><br>
                 <input type="text" value="0">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 75px;">Cell/ml</div><br>
+                <div class="blue-label" style="width: 75px;">Cell/ml</div><br>
                 <input type="text" value="0">
             </div>
             <div class="metric-box">
-                <div class="teal-label" style="width: 95px;">Car.Batt.</div><br>
+                <div class="blue-label" style="width: 95px;">Car.Batt.</div><br>
                 <input type="text" value="0">
             </div>
         </div>
@@ -211,7 +224,7 @@
 
         <div class="separator"></div>
 
-        <div class="teal-label" style="width: 150px; text-align: left; padding-left: 5px; margin-bottom: 10px;">Rif.Registro</div>
+        <div class="blue-label" style="width: 150px; text-align: left; padding-left: 5px; margin-bottom: 10px;">Rif.Registro</div>
         
         <div class="row">
             <span style="width: 140px;">Tipo/Se Prec.:</span>
