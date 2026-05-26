@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL0401 - Selezioni Stampa Campagna</title>
+    <title>GL0401 - Stampa Dati Produttori</title>
     <style>
         body {
             background-color: #ffffff;
@@ -32,9 +32,19 @@
             padding: 20px;
         }
 
-        /* Intestazioni Teal */
-        .teal-header {
-            background-color: #008080;
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #0284c7;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+        }
+
+        /* Intestazioni Azzurre */
+        .blue-header {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 6px;
             display: inline-block;
@@ -52,7 +62,7 @@
         .col-label { width: 220px; }
         .col-da    { width: 220px; }
         .col-a-lbl { width: 40px; text-align: center; }
-        .col-a    { width: 200px; }
+        .col-a     { width: 200px; }
         .col-ord   { width: 40px; text-align: center; }
         .col-spag  { width: 60px; text-align: center; }
         .col-stot  { width: 40px; text-align: center; }
@@ -87,14 +97,14 @@
             font-size: 16px;
         }
 
-        .btn-teal {
-            background-color: #008080;
+        .btn-blue {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 8px;
         }
 
-        .teal-block {
-            background-color: #008080;
+        .blue-block {
+            background-color: #0284c7;
             width: 330px;
             height: 22px;
         }
@@ -107,9 +117,11 @@
 
     <div class="window-content">
         
+        <div class="main-title">Stampa Dati Produttori</div>
+        
         <div class="flex-row" style="margin-bottom: 25px;">
-            <div class="teal-header">Selezioni</div>
-            <div style="margin-left: auto;" class="teal-header">Ordine S.Pag. S.Tot.</div>
+            <div class="blue-header">Selezioni</div>
+            <div style="margin-left: auto;" class="blue-header">Ordine S.Pag. S.Tot.</div>
         </div>
 
         <div class="flex-row">
@@ -166,4 +178,25 @@
             <div class="col-label">Cod.articolo da:</div>
             <div class="col-da"><input type="text" style="width: 180px;"></div>
             <div class="col-a-lbl">a:</div>
-            <div class="col-a"><input type="text" value="zzzz
+            <div class="col-a"><input type="text" value="zzzzzzzzzzzzzzz" style="width: 190px;"></div>
+            <div class="col-ord"><input type="text" value="0" class="center" style="width: 20px;"></div>
+            <div class="col-spag"><input type="text" value="N" class="center" style="width: 20px;"></div>
+            <div class="col-stot"><input type="text" value="N" class="center" style="width: 20px;"></div>
+        </div>
+
+        <div class="separator-box"></div>
+
+        <div class="footer-bar">
+            <div class="btn-blue">F1 -> Menu'</div>
+            <div class="blue-block"></div>
+            <div>
+                <span class="btn-blue">Conferma (S/N):</span>
+                <input type="text" style="width: 20px; margin-left: 5px; background-color: #0284c7; color: #ffffff; border: none; text-align: center;">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
