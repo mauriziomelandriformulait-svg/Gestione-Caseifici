@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>GL1601 - Codice Produttore</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000000;
+            margin: 20px;
+        }
+
+        .window-container {
+            width: 900px;
+            background-color: #ffffff; /* Sfondo bianco */
+            border: 2px solid #a0a0a0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .window-header {
+            color: #404040;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        .window-content {
+            padding: 25px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .label-col {
+            width: 240px;
+        }
+
+        .dots-col {
+            width: 30px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            background-color: #ffffff;
+            border: 1px solid #b0b0b0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 3px 5px;
+            color: #000000;
+        }
+
+        input.center {
+            text-align: center;
+        }
+
+        .separator {
+            border-top: 1px solid #c0c0c0;
+            margin: 20px 0;
+        }
+
+        /* Contenitore per i testi multilinea disallineati (Descrizione) */
+        .multiline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Barra dei comandi inferiore */
+        .footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 80px;
+            font-size: 16px;
+        }
+
+        .btn-teal {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 2px 8px;
+        }
+
+        .help-box {
+            background-color: #008080;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0 6px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="window-container">
+    <div class="window-header">GL1601</div>
+
+    <div class="window-content">
+        
+        <div class="row">
+            <div class="label-col">Codice produttore</div>
+            <div class="dots-col">:</div>
+            <div><input type="text" value="000" class="center" style="width: 45px;"></div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="row" style="margin-top: 35px;">
+            <div class="label-col">Codice Fornitore</div>
+            <div class="dots-col">:</div>
+            <div><input type="text" value="70000112" style="width: 110px;"></div>
+        </div>
+
+        <div class="row" style="align-items: flex-start; margin-top: 30px;">
+            <div class="label-col">Descrizione</div>
+            <div class="dots-col">:</div>
+            <div class="multiline-container">
+                <div><input type="text" value="24 ORE SEME SPA - DIV.CONVEGNI" style="width: 550px;"></div>
+                <div style="padding-left: 0px;"><input type="text" value="VIA P.LOMAZZO N. 52" style="width: 550px;"></div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 35px;">
+            <div class="label-col">Descrizione libera</div>
+            <div class="dots-col">:</div>
+            <div><input type="text" value="DESCRIZIONE LIBERA" style="width: 550px;"></div>
+        </div>
+
+        <div class="footer-bar">
+            <div class="btn-teal">F1 -> Ritorno a menu'</div>
+            <div style="display: flex; align-items: center;">
+                <span class="btn-teal">Conferma (S/N) :</span>
+                <span class="help-box">?</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
