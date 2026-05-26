@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL0701 - Selezioni e Creazione Documenti</title>
+    <title>GL0701 - Creazione Fatture Del Latte</title>
     <style>
         body {
             background-color: #ffffff;
@@ -32,9 +32,19 @@
             padding: 20px;
         }
 
-        /* Intestazioni evidenziate in Teal */
-        .teal-header {
-            background-color: #008080;
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #0284c7;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+        }
+
+        /* Intestazioni evidenziate in Azzurro */
+        .blue-header {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 8px;
             display: inline-block;
@@ -100,14 +110,14 @@
             font-size: 16px;
         }
 
-        .btn-teal {
-            background-color: #008080;
+        .btn-blue {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 8px;
         }
 
-        .teal-block {
-            background-color: #008080;
+        .blue-block {
+            background-color: #0284c7;
             width: 440px;
             height: 22px;
         }
@@ -120,7 +130,9 @@
 
     <div class="window-content">
         
-        <div class="teal-header">Selezioni</div>
+        <div class="main-title">Creazione Fatture Del Latte</div>
+        
+        <div class="blue-header">Selezioni</div>
 
         <div class="flex-row">
             <div class="col-label">Tipo documento</div>
@@ -175,9 +187,9 @@
         <div class="separator-line"></div>
 
         <div class="flex-row" style="margin-bottom: 12px;">
-            <span class="btn-teal" style="letter-spacing: 1px;">Tipi Documento da creare :</span>
+            <span class="btn-blue" style="letter-spacing: 1px;">Tipi Documento da creare :</span>
             <input type="text" value="0" class="blue-highlight center" style="width: 20px; margin-left: 10px; margin-right: 15px;">
-            <span class="btn-teal" style="letter-spacing: 1px;">(0=Entrambi 1=Fattura 2=Autofattura)</span>
+            <span class="btn-blue" style="letter-spacing: 1px;">(0=Entrambi 1=Fattura 2=Autofattura)</span>
         </div>
 
         <div class="flex-row">
@@ -217,12 +229,12 @@
         </div>
 
         <div class="footer-bar">
-            <div class="btn-teal">F1 -> Menu'</div>
-            <div class="teal-block"></div>
+            <div class="btn-blue">F1 -> Menu'</div>
+            <div class="blue-block"></div>
             <div>
-                <span class="btn-teal">Conferma (S/N):</span>
-                <input type="text" style="width: 20px; margin-left: 5px; background-color: #008080; color: #ffffff; border: none; text-align: center;">
-                <span class="btn-teal" style="margin-left: 5px; padding: 2px 6px;">?</span>
+                <span class="btn-blue">Conferma (S/N):</span>
+                <input type="text" style="width: 20px; margin-left: 5px; background-color: #0284c7; color: #ffffff; border: none; text-align: center;">
+                <span class="btn-blue" style="margin-left: 5px; padding: 2px 6px;">?</span>
             </div>
         </div>
 
