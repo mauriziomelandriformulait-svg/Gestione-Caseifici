@@ -12,14 +12,41 @@
             color: #333333;
         }
         h1 {
-            color: #000000;
+            color: #0284c7; /* Colore Sky Blue applicato qui */
             font-size: 24px;
-            border-bottom: 2px solid #cccccc;
+            border-bottom: 2px solid #0284c7; /* Bordo coordinato in Sky Blue */
             padding-bottom: 10px;
         }
+        
+        /* Contenitore principale a due colonne */
+        .main-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .left-column {
+            flex: 1;
+        }
+
+        .right-column {
+            flex-shrink: 0;
+            padding-right: 40px;
+            margin-top: 10px;
+        }
+
+        /* Forza l'SVG a non superare lo spazio della colonna su schermi compatti */
+        .right-column svg {
+            max-width: 100%;
+            height: auto;
+        }
+
         ul {
             list-style-type: none;
             padding-left: 0;
+            margin-bottom: 20px;
         }
         li {
             margin-bottom: 8px;
@@ -39,7 +66,27 @@
         }
         a:hover {
             text-decoration: underline;
-            color: #003366;
+            color: #0284c7; /* Colore Sky Blue al passaggio del mouse */
+        }
+
+        /* Stile specifico per la sezione del Manuale in fondo alla pagina */
+        .footer-manuale {
+            margin-top: 40px;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 15px;
+        }
+        /* Cambio icona per il manuale */
+        .footer-manuale li::before {
+            content: "📖"; 
+        }
+        /* Forza il colore Sky Blue e il corsivo sul link del manuale */
+        .footer-manuale a {
+            color: #0284c7;
+            font-style: italic;
+            font-weight: 500;
+        }
+        .footer-manuale a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -47,22 +94,38 @@
 
     <h1>Indice Funzioni</h1>
     
-    <ul>
-        <li><a href="parametri-conferimenti-latte.html">Parametri conferimenti latte</a></li>
-        <li><a href="gestione-analisi-latte.html">Gestione analisi latte</a></li>
-        <li><a href="stampa-estrazione-dati-analisi.html">Stampa/Estrazione dati analisi</a></li>
-        <li><a href="gestione-registri-di-carico-del-latte.html">Gestione registri di carico del latte</a></li>
-        <li><a href="stampa-tessere-di-consegna.html">Stampa tessere di consegna</a></li>
-        <li><a href="stampa-registri-di-carico.html">Stampa registri di carico</a></li>
-        <li><a href="gestione-delle-associazioni.html">Gestione delle associazioni</a></li>
-        <li><a href="gestione-dati-produttori.html">Gestione dati produttori</a></li>
-        <li><a href="stampa-estrazione-dati-produttori.html">Stampa/estrazione dati produttori</a></li>
-        <li><a href="gestione-carichi-su-registri-latte.html">Gestione carichi su registri latte</a></li>
-        <li><a href="stampa-riepilogo-movimenti.html">Stampa riepilogo movimenti</a></li>
-        <li><a href="creazione-fatture-del-latte.html">Creazione fatture del latte</a></li>
-        <li><a href="parametri-campagne-produzione-latte.html">Parametri campagne produzione latte</a></li>
-        <li><a href="manuale.html">Manuale</a></li>
-    </ul>
+    <div class="main-layout">
+        <div class="left-column">
+            <ul>
+                <li><a href="parametri-conferimenti-latte.html">Parametri conferimenti latte</a></li>
+                <li><a href="gestione-analisi-latte.html">Gestione analisi latte</a></li>
+                <li><a href="stampa-estrazione-dati-analisi.html">Stampa/Estrazione dati analisi</a></li>
+                <li><a href="gestione-registri-di-carico-del-latte.html">Gestione registri di carico del latte</a></li>
+                <li><a href="stampa-tessere-di-consegna.html">Stampa tessere di consegna</a></li>
+                <li><a href="stampa-registri-di-carico.html">Stampa registri di carico</a></li>
+                <li><a href="gestione-delle-associazioni.html">Gestione delle associazioni</a></li>
+                <li><a href="gestione-dati-produttori.html">Gestione dati produttori</a></li>
+                <li><a href="stampa-estrazione-dati-produttori.html">Stampa/estrazione dati produttori</a></li>
+                <li><a href="gestione-carichi-su-registri-latte.html">Gestione carichi su registri latte</a></li>
+                <li><a href="stampa-riepilogo-movimenti.html">Stampa riepilogo movimenti</a></li>
+                <li><a href="creazione-fatture-del-latte.html">Creazione fatture del latte</a></li>
+                <li><a href="parametri-campagne-produzione-latte.html">Parametri campaigns produzione latte</a></li>
+            </ul>
+
+            <ul class="footer-manuale">
+                <li><a href="manuale.html">Manuale</a></li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <svg width="240" height="600" viewBox="0 0 100 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 20 H65 V30 H35 Z" stroke="#0284c7" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M40 30 V60 C40 80 20 90 20 110 V230 C20 235 25 240 30 240 H70 C75 240 80 235 80 230 V110 C80 90 60 80 60 60 V30" stroke="#0284c7" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M30 140 H70" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M28 105 C 35 102, 45 108, 55 104 C 65 100, 72 105, 72 105" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
 
 </body>
 </html>
