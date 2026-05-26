@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL1601 - Codice Produttore</title>
+    <title>GL1601 - Gestione delle associazioni</title>
     <style>
         body {
             background-color: #ffffff;
@@ -30,6 +30,16 @@
 
         .window-content {
             padding: 25px;
+        }
+
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #0284c7;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
         }
 
         .row {
@@ -74,7 +84,7 @@
             width: 100%;
         }
 
-        /* Barra dei comandi inferiore */
+        /* Barra dei comandi inferiore azzurra */
         .footer-bar {
             display: flex;
             justify-content: space-between;
@@ -83,14 +93,14 @@
             font-size: 16px;
         }
 
-        .btn-teal {
-            background-color: #008080;
+        .btn-blue {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 8px;
         }
 
         .help-box {
-            background-color: #008080;
+            background-color: #0284c7;
             color: #ffffff;
             border: 1px solid #ffffff;
             padding: 0 6px;
@@ -105,6 +115,8 @@
     <div class="window-header">GL1601</div>
 
     <div class="window-content">
+        
+        <div class="main-title">Gestione delle associazioni</div>
         
         <div class="row">
             <div class="label-col">Codice produttore</div>
@@ -136,9 +148,9 @@
         </div>
 
         <div class="footer-bar">
-            <div class="btn-teal">F1 -> Ritorno a menu'</div>
+            <div class="btn-blue">F1 -> Ritorno a menu'</div>
             <div style="display: flex; align-items: center;">
-                <span class="btn-teal">Conferma (S/N) :</span>
+                <span class="btn-blue">Conferma (S/N) :</span>
                 <span class="help-box">?</span>
             </div>
         </div>
