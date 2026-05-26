@@ -42,7 +42,7 @@
         }
 
         .sidebar li {
-            margin-bottom: 5px;
+            margin-bottom: 8px; /* Leggermente aumentato per distanziare i blocchi con doppio testo */
         }
 
         .sidebar a {
@@ -55,11 +55,26 @@
             font-size: 14px;
             border-radius: 4px;
             transition: background 0.2s;
+            line-height: 1.3;
         }
 
         .sidebar a:hover {
             background-color: #f0f7ff;
             color: #0284c7;
+        }
+
+        /* Stile per il titolo del programma nell'indice */
+        .sidebar .program-title {
+            display: block;
+            font-family: Arial, sans-serif; /* Carattere normale, diverso dal codice */
+            font-weight: normal;
+            font-size: 11px; /* Carattere più piccolo del codice programma */
+            color: #64748b; /* Colore più tenue */
+            margin-top: 2px;
+        }
+        
+        .sidebar a:hover .program-title {
+            color: #0369a1; /* Cambia colore al passaggio del mouse */
         }
 
         /* Contenuto Principale */
@@ -173,20 +188,20 @@
     <div class="sidebar">
         <h2>Indice Programmi</h2>
         <ul>
-            <li><a href="#CONFL010">CONFL010</a></li>
-            <li><a href="#CONFL020">CONFL020</a></li>
-            <li><a href="#CONFL030">CONFL030</a></li>
-            <li><a href="#CONFL040">CONFL040</a></li>
-            <li><a href="#CONFL100">CONFL100</a></li>
-            <li><a href="#CONFL050">CONFL050</a></li>
-            <li><a href="#CONFL060">CONFL060</a></li>
-            <li><a href="#CONFL070">CONFL070</a></li>
-            <li><a href="#FBFOR030">FBFOR030</a></li>
-            <li><a href="#CONFL080">CONFL080</a></li>
-            <li><a href="#CONFL110">CONFL110</a></li>
-            <li><a href="#CONFL120">CONFL120</a></li>
-            <li><a href="#CONFL150">CONFL150</a></li>
-            <li><a href="#CONFL160">CONFL160</a></li>
+            <li><a href="#CONFL010">CONFL010<br><span class="program-title">Tabella parametri conferimenti</span></a></li>
+            <li><a href="#CONFL020">CONFL020<br><span class="program-title">Gestione analisi latte</span></a></li>
+            <li><a href="#CONFL030">CONFL030<br><span class="program-title">Stampa analisi con confronto</span></a></li>
+            <li><a href="#CONFL040">CONFL040<br><span class="program-title">Stampa/estrazione anagrafiche</span></a></li>
+            <li><a href="#CONFL100">CONFL100<br><span class="program-title">Gestione dati produttori</span></a></li>
+            <li><a href="#CONFL050">CONFL050<br><span class="program-title">Gestione giri camion</span></a></li>
+            <li><a href="#CONFL060">CONFL060<br><span class="program-title">Registri di carico latte</span></a></li>
+            <li><a href="#CONFL070">CONFL070<br><span class="program-title">Generazione fatture/autofatture</span></a></li>
+            <li><a href="#FBFOR030">FBFOR030<br><span class="program-title">Gestione fatture di acquisto</span></a></li>
+            <li><a href="#CONFL080">CONFL080<br><span class="program-title">Stampa fatture acquisto</span></a></li>
+            <li><a href="#CONFL110">CONFL110<br><span class="program-title">Stampa tessere mensili</span></a></li>
+            <li><a href="#CONFL120">CONFL120<br><span class="program-title">Variazioni listini latte</span></a></li>
+            <li><a href="#CONFL150">CONFL150<br><span class="program-title">Stampa/estrazione dati fatture</span></a></li>
+            <li><a href="#CONFL160">CONFL160<br><span class="program-title">Dati associazioni latte</span></a></li>
         </ul>
     </div>
 
@@ -320,7 +335,7 @@ cod_prod1   qta1    qta2    qta3    qta4    qta5    qta6    qta7    1
                 <li>Il dettaglio relativo alla spunta della BEM non deve essere mostrato.</li>
                 <li>Il corpo della fattura viene gestito come righe libere.</li>
                 <li>A chiusura del corpo, viene calcolato un ulteriore dettaglio dati (<code>fatlatrce</code>) per singolo articolo per determinare la ritenuta CEE e l'eventuale eccedenza.</li>
-                <li>La ritenuta CEE viene registrata in contabilità come acconto agganciato alla stessa partita della fattura e detratto dal netto a pagare.</li>
+                <li>La ritenuta CEE viene registrata in contabilità como acconto agganciato alla stessa partita della fattura e detratto dal netto a pagare.</li>
                 <li>Il riepilogo IVA viene quadrato automaticamente e proposto a video solo in caso di squadrature sui totali dovute a spese accessorie.</li>
             </ul>
             <div class="info-note">
