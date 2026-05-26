@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>GL0201 - Analisi Latte</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            color: #000000;
+            margin: 20px;
+        }
+
+        .window-container {
+            width: 850px;
+            background-color: #ffffff; /* Modificato da #f0f0f0 a #ffffff */
+            border: 2px solid #a0a0a0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .window-header {
+            background-color: #7aa1c0;
+            color: #ffffff;
+            padding: 3px 8px;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        .window-content {
+            padding: 15px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .separator {
+            border-top: 1px solid #b0b0b0;
+            margin: 15px 0;
+        }
+
+        label {
+            white-space: nowrap;
+        }
+
+        input[type="text"] {
+            background-color: #ffffff;
+            border: 1px solid #999999;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 2px 4px;
+            color: #000000;
+        }
+
+        /* Etichette evidenziate in teal */
+        .teal-label {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 2px 4px;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        /* Griglia dei parametri chimico-fisici */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .metric-box {
+            text-align: center;
+        }
+
+        .metric-box input {
+            width: 80%;
+            text-align: right;
+        }
+
+        /* Footer / Barra dei comandi */
+        .footer-bar {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 4px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .footer-bar span {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .help-box {
+            background-color: #008080;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="window-container">
+    <div class="window-header">GL0201</div>
+
+    <div class="window-content">
+        <div class="row">
+            <span style="width: 140px;">Tipo/Se Prec.:</span>
+            <input type="text" value="ANA" style="width: 40px; text-align: center;">
+            <input type="text" value="0" style="width: 15px; text-align: center; margin-left: 5px;">
+            <span style="margin-left: 15px; width: 220px;">Analisi latte</span>
+            <span style="margin-left: auto; margin-right: 10px;">Numero:</span>
+            <input type="text" value="0" style="width: 70px; text-align: right;">
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="row">
+            <span style="width: 140px;">Data analisi</span>
+            <input type="text" value="26/05/2026" style="width: 100px;">
+        </div>
+        <div class="row">
+            <span style="width: 140px;">Trasportatore</span>
+            <input type="text" value="XYZ" style="width: 50px;">
+        </div>
+        <div class="row">
+            <span style="width: 140px;">Produttore</span>
+            <input type="text" value="8021" style="width: 50px;">
+        </div>
+        <div class="row">
+            <span style="width: 140px;">Fornitore</span>
+        </div>
+        <div class="row">
+            <span style="width: 140px;">Articolo</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="teal-label" style="width: 45px;">Ps.</div><br>
+                <input type="text" value="0,00">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 30px;">SH</div><br>
+                <input type="text" value="0,0">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 75px;">Grasso%</div><br>
+                <input type="text" value="0,00">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 85px;">Proteine%</div><br>
+                <input type="text" value="0,00">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 85px;">D/Crios.</div><br>
+                <input type="text" value="0,000">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 50px;">H2O%</div><br>
+                <input type="text" value="0,00">
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="teal-label" style="width: 30px;">Na</div><br>
+                <input type="text" value="0,000">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 85px;">Inibenti</div><br>
+                <input type="text" value="N" style="text-align: center;">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 85px;">Lattosio%</div><br>
+                <input type="text" value="0,00">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 75px;">Res.S/M</div><br>
+                <input type="text" value="0">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 75px;">Cell/ml</div><br>
+                <input type="text" value="0">
+            </div>
+            <div class="metric-box">
+                <div class="teal-label" style="width: 95px;">Car.Batt.</div><br>
+                <input type="text" value="0">
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="row">
+            <span style="width: 200px;">Osservazioni e note</span>
+            <input type="text" style="width: 100%; margin-left: 10px;">
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="teal-label" style="width: 150px; text-align: left; padding-left: 5px; margin-bottom: 10px;">Rif.Registro</div>
+        
+        <div class="row">
+            <span style="width: 140px;">Tipo/Se Prec.:</span>
+            <input type="text" value="REG" style="width: 40px; text-align: center;">
+            <input type="text" value="0" style="width: 15px; text-align: center; margin-left: 5px;">
+            <span style="margin-left: auto; margin-right: 10px;">Numero:</span>
+            <input type="text" value="0" style="width: 70px; text-align: right;">
+        </div>
+
+        <div class="row">
+            <span style="width: 140px;">Quantita</span>
+            <input type="text" value="0,00+" style="width: 100px; text-align: right;">
+            
+            <span style="margin-left: 20px; margin-right: 10px;">Prezzo :</span>
+            <input type="text" value="0,000" style="width: 100px; text-align: right;">
+            
+            <span style="margin-left: 20px; margin-right: 10px;">Importo :</span>
+            <input type="text" value="0+" style="width: 100px; text-align: right;">
+        </div>
+
+        <div class="footer-bar">
+            <span>F1 -> Ritorno a menu'</span>
+            <span style="margin-left: auto; margin-right: 15px;">Conferma (S/N/R) :</span>
+            <span class="help-box">?</span>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
