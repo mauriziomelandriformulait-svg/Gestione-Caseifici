@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>GL0604 - Registri di Carico</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000000;
+            margin: 20px;
+        }
+
+        .window-container {
+            width: 950px;
+            background-color: #ffffff; /* Sfondo bianco richiesto */
+            border: 2px solid #a0a0a0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .window-header {
+            color: #404040;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        .window-content {
+            padding: 15px;
+        }
+
+        /* Top Bar Info */
+        .top-info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            background-color: #ffffff;
+            border: 1px solid #b0b0b0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 2px 4px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .blue-highlight {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none !important;
+        }
+
+        /* Intestazione Tabella */
+        .table-header-teal {
+            background-color: #008080;
+            color: #ffffff;
+            display: flex;
+            padding: 4px 0;
+            margin-bottom: 10px;
+        }
+
+        .hdr-r { width: 40px; text-align: center; background-color: #008080; padding-left: 5px;}
+        .hdr-prod { width: 140px; text-align: left; background-color: #008080; padding-left: 25px;}
+        .hdr-rest { flex-grow: 1; background-color: #008080; text-align: left; padding-left: 40px; letter-spacing: 2px;}
+
+        /* Griglia dati */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table td {
+            padding: 3px 0;
+            vertical-align: middle;
+        }
+
+        .col-zero {
+            text-align: center;
+            width: 75px;
+        }
+
+        /* Barra di stato inferiore verde petrolio */
+        .status-bar {
+            background-color: #008080;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 10px;
+            margin-top: 15px;
+        }
+
+        /* Toolbar dei comandi F */
+        .footer-commands {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 4px 10px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .f-key {
+            color: #ffff00; /* Giallo per i tasti F standard dei terminali */
+        }
+    </style>
+</head>
+<body>
+
+<div class="window-container">
+    <div class="window-header">GL0604</div>
+
+    <div class="window-content">
+        
+        <div class="top-info-row">
+            <span>Tipo/Prec. :</span>
+            <input type="text" value="REG" style="width: 45px;">
+            <input type="text" value="0" style="width: 20px;">
+            <span style="margin-left: 15px;">Registri di carico d Num.:</span>
+            <input type="text" value="0" class="blue-highlight" style="width: 60px;">
+            <span style="margin-left: 15px;">del:</span>
+            <input type="text" style="width: 110px;">
+        </div>
+
+        <div class="top-info-row" style="margin-bottom: 20px;">
+            <span style="width: 180px;">Codice registro &nbsp;:</span>
+            <span style="width: 180px;">Agente :</span>
+            <span>Articolo :</span>
+        </div>
+
+        <div class="table-header-teal">
+            <div class="hdr-r">R.</div>
+            <div class="hdr-prod">Produttore</div>
+            <div class="hdr-rest">Agente : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Articolo :</div>
+        </div>
+
+        <table class="data-table">
+            <script>
+                for (let i = 0; i < 15; i++) {
+                    document.write(`
+                    <tr>
+                        <td style="width: 40px; text-align: center;">0</td>
+                        <td style="width: 140px;"><input type="text" style="width: 85px;"></td>
+                        <td class="col-zero">0</td>
+                        <td class="col-zero">0</td>
+                        <td class="col-zero">0</td>
+                        <td class="col-zero">0</td>
+                        <td class="col-zero">0</td>
+                        <td style="text-align: right; padding-right: 10px;"><input type="text" value="0" style="width: 75px; text-align: right;"></td>
+                    </tr>
+                    `);
+                }
+            </script>
+        </table>
+
+        <div class="status-bar">
+            <div>---&gt;</div>
+            <div>:</div>
+            <div style="color: #ffff00;">0+</div>
+        </div>
+
+        <div class="footer-commands">
+            <span class="f-key">F1</span>-&gt;Menu 
+            <span class="f-key" style="margin-left: 15px;">F2</span>-&gt;Cambia reg. 
+            <span class="f-key" style="margin-left: 15px;">F10</span>-&gt;Ins/Mod.riga 
+            <span class="f-key" style="margin-left: 15px;">F20</span>-&gt;Canc.Riga
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
