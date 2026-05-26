@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL0901 - Selezioni</title>
+    <title>GL0901 - Stampa Tessere di Consegna</title>
     <style>
         body {
             background-color: #ffffff;
@@ -32,9 +32,19 @@
             padding: 20px;
         }
 
-        /* Intestazione Teal con lettere spaziate */
-        .teal-header {
-            background-color: #008080;
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #0284c7;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+        }
+
+        /* Intestazione Azzurra con lettere spaziate */
+        .blue-header {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 10px;
             display: inline-block;
@@ -53,7 +63,7 @@
         .col-label { width: 240px; }
         .col-da    { width: 220px; }
         .col-a-lbl { width: 40px; text-align: left; }
-        .col-a    { width: 250px; }
+        .col-a     { width: 250px; }
 
         input[type="text"] {
             background-color: #ffffff;
@@ -70,7 +80,7 @@
         .separator {
             border-top: 1px solid #c0c0c0;
             margin: 40px 0 15px 0;
-            height: 60px; /* Spazio vuoto inferiore presente nella schermata original */
+            height: 60px; /* Spazio vuoto inferiore presente nella schermata originale */
         }
 
         /* Barra dei comandi inferiore */
@@ -82,14 +92,14 @@
             font-size: 16px;
         }
 
-        .btn-teal {
-            background-color: #008080;
+        .btn-blue {
+            background-color: #0284c7;
             color: #ffffff;
             padding: 2px 8px;
         }
 
-        .teal-block {
-            background-color: #008080;
+        .blue-block {
+            background-color: #0284c7;
             width: 440px;
             height: 22px;
         }
@@ -102,7 +112,9 @@
 
     <div class="window-content">
         
-        <div class="teal-header">Selezioni</div>
+        <div class="main-title">Stampa Tessere di Consegna</div>
+        
+        <div class="blue-header">Selezioni</div>
 
         <div class="flex-row">
             <div class="col-label">Cod.Registro</div>
@@ -152,11 +164,11 @@
         <div class="separator"></div>
 
         <div class="footer-bar">
-            <div class="btn-teal">F1 -> Menu'</div>
-            <div class="teal-block"></div>
+            <div class="btn-blue">F1 -> Menu'</div>
+            <div class="blue-block"></div>
             <div>
-                <span class="btn-teal">Conferma (S/N):</span>
-                <input type="text" style="width: 20px; margin-left: 5px; background-color: #008080; color: #ffffff; border: none;">
+                <span class="btn-blue">Conferma (S/N):</span>
+                <input type="text" style="width: 20px; margin-left: 5px; background-color: #0284c7; color: #ffffff; border: none; text-align: center;">
             </div>
         </div>
 
