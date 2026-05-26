@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>GL0604 - Registri di Carico</title>
+    <title>GL0604 - Gestione Carichi Su Registro Latte</title>
     <style>
         body {
             background-color: #ffffff;
@@ -32,6 +32,16 @@
             padding: 15px;
         }
 
+        /* Titolo Principale della Scheda */
+        .main-title {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            color: #0284c7;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 5px;
+        }
+
         /* Top Bar Info */
         .top-info-row {
             display: flex;
@@ -57,18 +67,18 @@
             border: none !important;
         }
 
-        /* Intestazione Tabella */
-        .table-header-teal {
-            background-color: #008080;
+        /* Intestazione Tabella in Azzurro */
+        .table-header-blue {
+            background-color: #0284c7;
             color: #ffffff;
             display: flex;
             padding: 4px 0;
             margin-bottom: 10px;
         }
 
-        .hdr-r { width: 40px; text-align: center; background-color: #008080; padding-left: 5px;}
-        .hdr-prod { width: 140px; text-align: left; background-color: #008080; padding-left: 25px;}
-        .hdr-rest { flex-grow: 1; background-color: #008080; text-align: left; padding-left: 40px; letter-spacing: 2px;}
+        .hdr-r { width: 40px; text-align: center; background-color: #0284c7; padding-left: 5px;}
+        .hdr-prod { width: 140px; text-align: left; background-color: #0284c7; padding-left: 25px;}
+        .hdr-rest { flex-grow: 1; background-color: #0284c7; text-align: left; padding-left: 40px; letter-spacing: 2px;}
 
         /* Griglia dati */
         .data-table {
@@ -86,9 +96,9 @@
             width: 75px;
         }
 
-        /* Barra di stato inferiore verde petrolio */
+        /* Barra di stato inferiore azzurra */
         .status-bar {
-            background-color: #008080;
+            background-color: #0284c7;
             color: #ffffff;
             display: flex;
             justify-content: space-between;
@@ -96,9 +106,9 @@
             margin-top: 15px;
         }
 
-        /* Toolbar dei comandi F */
+        /* Toolbar dei comandi F azzurra */
         .footer-commands {
-            background-color: #008080;
+            background-color: #0284c7;
             color: #ffffff;
             padding: 4px 10px;
             margin-top: 10px;
@@ -117,6 +127,8 @@
 
     <div class="window-content">
         
+        <div class="main-title">Gestione Carichi Su Registro Latte</div>
+        
         <div class="top-info-row">
             <span>Tipo/Prec. :</span>
             <input type="text" value="REG" style="width: 45px;">
@@ -133,7 +145,7 @@
             <span>Articolo :</span>
         </div>
 
-        <div class="table-header-teal">
+        <div class="table-header-blue">
             <div class="hdr-r">R.</div>
             <div class="hdr-prod">Produttore</div>
             <div class="hdr-rest">Agente : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Articolo :</div>
