@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuale Gestione Latte</title>
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Sidebar di navigazione */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            border-right: 2px solid #e2e8f0;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            padding: 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 8px 12px;
+            color: #4a5568;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0f7ff;
+            color: #0284c7;
+        }
+
+        /* Contenuto Principale */
+        .main-content {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 1000px;
+            width: calc(100% - 280px);
+            box-sizing: border-box;
+        }
+
+        .main-header {
+            border-bottom: 3px solid #0284c7;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .main-header h1 {
+            color: #0284c7;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .main-header p {
+            color: #64748b;
+            margin: 5px 0 0 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Schede Programma */
+        .program-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .program-id {
+            color: #0284c7;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #cbd5e1;
+            padding-bottom: 8px;
+        }
+
+        .days-badge {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .program-card p {
+            line-height: 1.6;
+            font-size: 15px;
+            margin-top: 0;
+        }
+
+        .sub-function {
+            margin-top: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #0284c7;
+        }
+
+        .sub-function h4 {
+            color: #0f172a;
+            margin: 10px 0 5px 0;
+            font-size: 15px;
+        }
+
+        /* Blocchi Monospazio Preformattati */
+        pre {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow-x: auto;
+            color: #1e293b;
+            margin: 15px 0;
+        }
+
+        /* Note e Avvisi */
+        .info-note {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #166534;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Indice Programmi</h2>
+        <ul>
+            <li><a href="#CONFL010">CONFL010</a></li>
+            <li><a href="#CONFL020">CONFL020</a></li>
+            <li><a href="#CONFL030">CONFL030</a></li>
+            <li><a href="#CONFL040">CONFL040</a></li>
+            <li><a href="#CONFL100">CONFL100</a></li>
+            <li><a href="#CONFL050">CONFL050</a></li>
+            <li><a href="#CONFL060">CONFL060</a></li>
+            <li><a href="#CONFL070">CONFL070</a></li>
+            <li><a href="#FBFOR030">FBFOR030</a></li>
+            <li><a href="#CONFL080">CONFL080</a></li>
+            <li><a href="#CONFL110">CONFL110</a></li>
+            <li><a href="#CONFL120">CONFL120</a></li>
+            <li><a href="#CONFL150">CONFL150</a></li>
+            <li><a href="#CONFL160">CONFL160</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="main-header">
+            <h1>Manuale Gestione Latte</h1>
+            <p>Flusso logico della procedura e specifiche tecniche dei programmi</p>
+        </div>
+
+        <div class="program-card" id="CONFL010">
+            <h3 class="program-id">CONFL010 : Gestione della tabella parametri per conferimenti latte</h3>
+            <p>Il programma consente la configurazione e la manutenzione dei parametri generali di sistema legati alla gestione e al controllo dei conferimenti di latte.</p>
+        </div>
+
+        <div class="program-card" id="CONFL020">
+            <h3 class="program-id">CONFL020 : Gestione delle analisi del latte</h3>
+            <p>Permette la registrazione, la modifica e la consultazione delle analisi chimico-fisiche eseguite sulle partite di latte conferite.</p>
+            <div class="sub-function">
+                <h4>Funzioni collegate:</h4>
+                <p>• Ricalcolo prezzi qualità da analisi del periodo di riferimento.</p>
+            </div>
+        </div>
+
+        <div class="program-card" id="CONFL030">
+            <h3 class="program-id">CONFL030 : Stampa delle analisi del latte con confronto</h3>
+            <p>Procedura dedicata alla stampa della reportistica analitica, con l'esecuzione del confronto automatico dei valori rilevati rispetto ai parametri teorici di riferimento stabiliti.</p>
+        </div>
+
+        <div class="program-card" id="CONFL040">
+            <h3 class="program-id">CONFL040 : Stampa ed estrazione anagrafiche produttori</h3>
+            <p>Utility per la stampa cartacea o l'esportazione strutturata dei flussi anagrafici relativi ai produttori inseriti a sistema.</p>
+        </div>
+
+        <div class="program-card" id="CONFL100">
+            <span class="days-badge">GG: 2</span>
+            <h3 class="program-id">CONFL100 : Gestione dati produttori latte</h3>
+            <p>Il modulo permette di gestire in modo centralizzato tutte le informazioni aggiuntive specifiche del produttore di latte e i parametri ausiliari legati alle singole campagne di produzione correnti e storiche.</p>
+        </div>
+
+        <div class="program-card" id="CONFL050">
+            <span class="days-badge">GG: 2</span>
+            <h3 class="program-id">CONFL050 : Gestione giri camion</h3>
+            <div class="sub-function">
+                <h4>• Gestione giri camion (IS/MF/IT/AN)</h4>
+                <p>Il programma permette di strutturare e gestire la logistica dei giri di raccolta del latte sul territorio.</p>
+            </div>
+            <div class="sub-function">
+                <h4>• Creazione/Ufficializzazione registri di carico</h4>
+                <p>Permette di generare, partendo da un registro pilota preimpostato, la testata e le righe di dettaglio di un documento di carico numerato (configurato come bolla di entrata). Il documento è valido per tutti i giorni compresi nell'intervallo date impostato a video (per un massimo di 7 giorni).</p>
+            </div>
+        </div>
+
+        <div class="program-card" id="CONFL060">
+            <span class="days-badge">GG: 3</span>
+            <h3 class="program-id">CONFL060 : Gestione registri di carico del latte</h3>
+            <p>Permette di operare sulla movimentazione corrente tramite l'uso di una bolla di carico settimanale che include l'elenco dei conferenti ordinati secondo il giro camion logistico.</p>
+            
+            <div class="sub-function">
+                <h4>• Gestione registri (IS/MF/IT/AN)</h4>
+                <p>Il programma gestisce la testata e il dettaglio dei registri:</p>
+                <pre>
+<b>Testata (Dati Generali):</b>
+data_iniz_num / tipo_doc / numero_doc (Chiave)
+
+<b>Dettaglio:</b>
+data_iniz_num / tipo_doc / numero_doc + riga_doc (9999) / data_mov (Chiave)</pre>
+            </div>
+
+            <div class="sub-function">
+                <h4>Dati del corpo:</h4>
+                <p>Codice del produttore, flag fatturato (0/1), eventuale esenzione IVA del fornitore o codice IVA dell'articolo (se soggetto a variazioni nel periodo), quantità giornaliera conferita in UMA. Il prezzo inserito è da considerarsi <i>provvisorio</i> in quanto suscettibile di variazioni prima della generazione della fattura.</p>
+            </div>
+
+            <div class="sub-function">
+                <h4>Matrice di inserimento a video (Max 7 elementi):</h4>
+                <pre>
+produttore data1,  data2,  data3,  data4,  data5,  data6,  data7. (tot)
+
+cod_prod1   qta1    qta2    qta3    qta4    qta5    qta6    qta7    1
+      2     qta1    qta2    qta3    qta4    qta5    qta6    qta7    2
+      3     qta1    qta2    qta3    qta4    qta5    qta6    qta7    3
+      4     qta1    qta2    qta3    qta4    qta5    qta6    qta7    4
+      5     qta1    qta2    qta3    qta4    qta5    qta6    qta7    5
+      6     qta1    qta2    qta3    qta4    qta5    qta6    qta7    6
+      7     qta1    qta2    qta3    qta4    qta5    qta6    qta7    7
+      8     qta1    qta2    qta3    qta4    qta5    qta6    qta7    8
+      9     qta1    qta2    qta3    qta4    qta5    qta6    qta7    9
+     10     qta1    qta2    qta3    qta4    qta5    qta6    qta7    10
+
+            iva1    iva2    iva3    iva4    iva5    iva6    iva7
+            prz1    prz2    prz3    prz4    prz5    prz6    prz7</pre>
+            </div>
+
+            <div class="info-note">
+                <strong>Regole operative di compilazione:</strong> L'IVA e il prezzo vengono richiesti solo premendo il tasto funzione in modalità modifica. Alla conferma di una riga il cursore propone automaticamente la successiva. Le righe di dettaglio vengono salvate solo per quantità diverse da zero. Se in modifica si azzera la quantità, la riga viene rimossa.
+            </div>
+
+            <div class="sub-function">
+                <h4>• Stampa registri di carico del latte (ST)</h4>
+                <p>Esegue la stampa dei registri per codice registro o per numero progressivo del registro.</p>
+            </div>
+        </div>
+
+        <div class="program-card" id="CONFL070">
+            <span class="days-badge">GG: 3</span>
+            <h3 class="program-id">CONFL070 : Generazione fatture/autofatture del latte da movimenti</h3>
+            <p>Esegue la lettura sequenziale dei movimenti di carico del latte per singolo produttore, genera la fattura corrispondente e ne esegue la contabilizzazione automatica.</p>
+            
+            <div class="sub-function">
+                <h4>Flusso logico di elaborazione:</h4>
+                <p>Il programma estrae dai registri di carico tutti i fornitori non fatturati che presentano movimenti attivi:</p>
+                <pre>SELECT cod_forn, SUM(d.qta) FROM reglattes t JOIN reglatdet d ON ... WHERE fatturati = '0' GROUP BY 1 HAVING SUM(d.qta) > 0</pre>
+                <p>Per ogni fornitore estratto:</p>
+                <ul>
+                    <li>Apertura della transazione SQL.</li>
+                    <li>Controllo bloccante sullo stato dei documenti (verifica assenza stati '0', '1', '2').</li>
+                    <li>Lettura tramite cursore delle fatture storiche in stato '3' per totalizzare le quantità già consegnate e portarle in stato '4' (non modificabile).</li>
+                    <li>Scrittura righe di dettaglio su <code>fatacqdet</code> raggruppate per combinazione fornitore/articolo/prezzo/IVA.</li>
+                    <li>A rottura di articolo: aggiornamento dei progressivi per il calcolo della ritenuta CEE (<code>fatlatrce</code>).</li>
+                    <li>A rottura di fornitore: scrittura testata (<code>fatacqtes</code>), chiamata alla funzione di contabilizzazione (<code>FBFOR030</code>) e blocco dei registri di carico (stato fatturato = '1').</li>
+                    <li>Chiusura e commit della transazione.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="program-card" id="FBFOR030">
+            <span class="days-badge">GG: 3</span>
+            <h3 class="program-id">FBFOR030 : Gestione fatture di acquisto</h3>
+            <p>Gestisce lo stato di non modificabilità (flag = 1) sulla tabella <code>fatacqtes</code>. Se il tipo di documento esaminato rientra tra quelli parametrizzati nella tabella <code>tbparconfl</code> come fattura/autofattura latte, si applicano le seguenti regole:</p>
+            <ul>
+                <li>Il dettaglio relativo alla spunta della BEM non deve essere mostrato.</li>
+                <li>Il corpo della fattura viene gestito come righe libere.</li>
+                <li>A chiusura del corpo, viene calcolato un ulteriore dettaglio dati (<code>fatlatrce</code>) per singolo articolo per determinare la ritenuta CEE e l'eventuale eccedenza.</li>
+                <li>La ritenuta CEE viene registrata in contabilità come acconto agganciato alla stessa partita della fattura e detratto dal netto a pagare.</li>
+                <li>Il riepilogo IVA viene quadrato automaticamente e proposto a video solo in caso di squadrature sui totali dovute a spese accessorie.</li>
+            </ul>
+            <div class="info-note">
+                <strong>Operazioni di Modifica (MF) e Annullamento (AN):</strong> Aggiornano la ritenuta CEE se già contabilizzata. Le operazioni sono inibite se il flag di blocco è attivo. Il calcolo dell'eccedenza agisce retroattivamente su tutti i movimenti della campagna con data minore o uguale al documento modificato.
+            </div>
+        </div>
+
+        <div class="program-card" id="CONFL080">
+            <span class="days-badge">GG: 2</span>
+            <h3 class="program-id">CONFL080 : Stampa fatture di acquisto dei produttori latte</h3>
+            <p>Il programma legge i dati archiviati nelle tabelle fiscali (<code>fatacqtes/det/latrce</code>) e produce la stampa comprensiva dei dati fiscali ordinari, delle eccedenze rilevate con relative ritenute e del dettaglio delle analisi del latte associate (<code>analat</code>) per il periodo selezionato.</p>
+        </div>
+
+        <div class="program-card" id="CONFL110">
+            <span class="days-badge">GG: 2</span>
+            <h3 class="program-id">CONFL110 : Stampa tessere mensili per il produttore</h3>
+            <p>Esegue la stampa dei tabulati delle tessere mensili riepilogative destinate al produttore, basandosi sui dati dei giri camion e dei registri di carico.</p>
+        </div>
+
+        <div class="program-card" id="CONFL120">
+            <span class="days-badge">GG: 2</span>
+            <h3 class="program-id">CONFL120 : Gestione variazioni su listini del latte</h3>
+            <div class="sub-function">
+                <h4>Logica applicativa:</h4>
+                <p>Il programma permette la gestione delle tabelle delle variazioni dei listini per il prezzo qualità e agisce differenziando i fornitori:</p>
+                <ul>
+                    <li><strong>Senza prezzo qualità:</strong> Applica e calcola il prezzo base standard di listino/contratto valido per il periodo.</li>
+                    <li><strong>Con prezzo qualità (<code>afol.se_prz_qualita = '1'</code>):</strong> Esamina le analisi del periodo da fatturare e determina il prezzo finale calcolando la variazione algebrica rispetto al listino base.</li>
+                </ul>
+                <p>Per tutte le posizioni elaborate viene inserito o aggiornato un contratto temporaneo (tabelle <code>listidetdt/contrdet</code> e <code>reglatdet</code>) e vengono allineati i relativi movimenti di magazzino con il nuovo prezzo calcolato.</p>
+            </div>
+        </div>
+
+        <div class="program-card" id="CONFL150">
+            <h3 class="program-id">CONFL150 : Stampa ed estrazione dati fatture/autofatture</h3>
+            <p>Programma di reportistica ed esportazione su file in formato ASCII dei dati del fatturato, con esecuzione del calcolo integrato delle eccedenze sia su base mensile che su base annuale (fine anno).</p>
+        </div>
+
+        <div class="program-card" id="CONFL160">
+            <h3 class="program-id">CONFL160 : Gestione dati associazioni latte</h3>
+            <p>Modulo anagrafico e gestionale dedicato all'inserimento e al mantenimento delle informazioni relative alle associazioni dei produttori di latte.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
