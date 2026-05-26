@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>GL0901 - Selezioni</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000000;
+            margin: 20px;
+        }
+
+        .window-container {
+            width: 900px;
+            background-color: #ffffff; /* Sfondo bianco inserito qui */
+            border: 2px solid #a0a0a0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .window-header {
+            color: #404040;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        .window-content {
+            padding: 20px;
+        }
+
+        /* Etichetta "Selezioni" con lettere spaziate */
+        .teal-header {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 2px 10px;
+            display: inline-block;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .flex-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        /* Dimensioni colonne per allineamento perfetto */
+        .col-label { width: 240px; }
+        .col-da    { width: 220px; }
+        .col-a-lbl { width: 40px; text-align: left; }
+        .col-a    { width: 250px; }
+
+        input[type="text"] {
+            background-color: #ffffff;
+            border: 1px solid #b0b0b0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 2px 4px;
+            color: #000000;
+        }
+
+        input.center { text-align: center; }
+
+        /* Box di separazione grigio chiaro in basso */
+        .separator-box {
+            border: 1px solid #c0c0c0;
+            margin: 40px 0 15px 0;
+            height: 60px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer per i comandi rapidi */
+        .footer-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 16px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+
+        .btn-teal {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 2px 8px;
+        }
+
+        .teal-block {
+            background-color: #008080;
+            width: 440px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="window-container">
+    <div class="window-header">GL0901</div>
+
+    <div class="window-content">
+        
+        <div class="teal-header">Selezioni</div>
+
+        <div class="flex-row">
+            <div class="col-label">Cod.Registro</div>
+            <div class="col-da">da: <input type="text" style="width: 40px;"></div>
+            <div class="col-a-lbl">a:</div>
+            <div class="col-a"><input type="text" value="zzz" style="width: 45px;"></div>
+        </div>
+
+        <div class="flex-row">
+            <div class="col-label">Cod.agente/tras.</div>
+            <div class="col-da">da: <input type="text" style="width: 55px;"></div>
+            <div class="col-a-lbl">a:</div>
+            <div class="col-a"><input type="text" value="zzzz" style="width: 60px;"></div>
+        </div>
+
+        <div class="flex-row">
+            <div class="col-label">Cod.Articolo</div>
+            <div class="col-da">da: <input type="text" style="width: 170px;"></div>
+            <div class="col-a-lbl">a:</div>
+            <div class="col-a"><input type="text" value="zzzzzzzzzzzzzzz" style="width: 180px;"></div>
+        </div>
+
+        <div class="flex-row" style="height: 15px;"></div>
+
+        <div class="flex-row">
+            <div class="col-label">Cod.Fornitore</div>
+            <div class="col-da">da: <input type="text" style="width: 65px;"></div>
+            <div class="col-a-lbl">a:</div>
+            <div class="col-a"><input type="text" value="zzzzz" style="width: 70px;"></div>
+        </div>
+
+        <div class="flex-row">
+            <div class="col-label">Progressivo</div>
+            <div class="col-da">da: <input type="text" value="0" class="center" style="width: 40px;"></div>
+            <div class="col-a-lbl">a:</div>
+            <div class="col-a"><input type="text" value="9999" class="center" style="width: 50px;"></div>
+        </div>
+
+        <div class="flex-row" style="height: 30px;"></div>
+
+        <div class="flex-row">
+            <div class="col-label" style="width: 200px;">Note /Mese</div>
+            <div style="width: 40px; text-align: left;">:</div>
+            <div style="flex-grow: 1;"><input type="text" style="width: 490px;"></div>
+        </div>
+
+        <div class="separator-box"></div>
+
+        <div class="footer-bar">
+            <div class="btn-teal">F1 -> Menu'</div>
+            <div class="teal-block"></div>
+            <div>
+                <span class="btn-teal">Conferma (S/N):</span>
+                <input type="text" style="width: 20px; margin-left: 5px; background-color: #008080; color: #ffffff; border: none;">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
