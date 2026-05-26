@@ -6,65 +6,72 @@
     <title>Indice Gestionale Latte</title>
     <style>
         body {
+            background-color: #ffffff;
             font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            margin: 40px;
+            margin: 20px;
+            color: #333333;
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+            color: #000000;
+            font-size: 24px;
+            border-bottom: 2px solid #cccccc;
             padding-bottom: 10px;
         }
         ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
         }
         li {
-            margin: 10px 0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        /* Icona segnaposto per simulare lo stile del gestionale */
+        li::before {
+            content: "📄";
+            margin-right: 8px;
+            font-size: 14px;
         }
         a {
             text-decoration: none;
-            color: #2980b9;
+            color: #0066cc;
             font-size: 16px;
-            display: inline-block;
-            transition: color 0.2s;
         }
         a:hover {
-            color: #1abc9c;
             text-decoration: underline;
+            color: #003366;
         }
     </style>
 </head>
 <body>
 
     <h1>Indice Funzioni</h1>
-
+    
     <ul>
-        <li><a href="parametri_conferimenti_latte.html">Parametri conferimenti latte</a></li>
-        <li><a href="gestione_analisi_latte.html">Gestione analisi latte</a></li>
-        <li><a href="stampa_estrazione_dati_analisi.html">Stampa/Estrazione dati analisi</a></li>
-        <li><a href="gestione_registri_di_carico_del_latte.html">Gestione registri di carico del latte</a></li>
-        <li><a href="stampa_tessere_di_consegna.html">Stampa tessere di consegna</a></li>
-        <li><a href="stampa_registri_di_carico.html">Stampa registri di carico</a></li>
-        <li><a href="gestione_delle_associazioni.html">Gestione delle associazioni</a></li>
-        <li><a href="anagrafe_articoli.html">Anagrafe Articoli</a></li>
-        <li><a href="anagrafe_fornitori.html">Anagrafe Fornitori</a></li>
-        <li><a href="gestione_dati_produttori.html">Gestione dati produttori</a></li>
-        <li><a href="stampa_estrazione_dati_produttori.html">Stampa/estrazione dati produttori</a></li>
-        <li><a href="gestione_carichi_su_registri_latte.html">Gestione carichi su registri latte</a></li>
-        <li><a href="stampa_riepilogo_movimenti.html">Stampa riepilogo movimenti</a></li>
-        <li><a href="creazione_fatture_del_latte.html">Creazione fatture del latte</a></li>
-        <li><a href="gestione_fattura_autofatture.html">Gestione fattura/autofatture</a></li>
-        <li><a href="stampa_fatture_autofatture.html">Stampa Fatture/autofatture</a></li>
-        <li><a href="stampa_estrazione_dati_fatture_floppy.html">Stampa /estrazione dati fatture floppy</a></li>
-        <li><a href="stampa_estrazione_dati_fatture_su_pc.html">Stampa /estrazione dati fatture su pc</a></li>
-        <li><a href="contabilizzazione_fatture_autofatture.html">Contabilizzazione fatture/autofatture</a></li>
-        <li><a href="parametri_campagne_produzione_latte.html">Parametri campagne produzione latte</a></li>
-        <li><a href="interroga_partite_e_schede.html">Interroga partite e schede</a></li>
-        <li><a href="manutenzione_partitario.html">Manutenzione partitario</a></li>
-        <li><a href="stampa_movimenti_magazzino.html">Stampa movimenti magazzino</a></li>
-        <li><a href="pagamenti_a_fornitori.html">Pagamenti a fornitori</a></li>
+        <li><a href="parametri-conferimenti-latte.html">Parametri conferimenti latte</a></li>
+        <li><a href="gestione-analisi-latte.html">Gestione analisi latte</a></li>
+        <li><a href="stampa-estrazione-dati-analisi.html">Stampa/Estrazione dati analisi</a></li>
+        <li><a href="gestione-registri-di-carico-del-latte.html">Gestione registri di carico del latte</a></li>
+        <li><a href="stampa-tessere-di-consegna.html">Stampa tessere di consegna</a></li>
+        <li><a href="stampa-registri-di-carico.html">Stampa registri di carico</a></li>
+        <li><a href="gestione-delle-associazioni.html">Gestione delle associazioni</a></li>
+        <li><a href="anagrafe-articoli.html">Anagrafe Articoli</a></li>
+        <li><a href="anagrafe-fornitori.html">Anagrafe Fornitori</a></li>
+        <li><a href="gestione-dati-produttori.html">Gestione dati produttori</a></li>
+        <li><a href="stampa-estrazione-dati-produttori.html">Stampa/estrazione dati produttori</a></li>
+        <li><a href="gestione-carichi-su-registri-latte.html">Gestione carichi su registri latte</a></li>
+        <li><a href="stampa-riepilogo-movimenti.html">Stampa riepilogo movimenti</a></li>
+        <li><a href="creazione-fatture-del-latte.html">Creazione fatture del latte</a></li>
+        <li><a href="gestione-fattura-autofatture.html">Gestione fattura/autofatture</a></li>
+        <li><a href="stampa-fatture-autofatture.html">Stampa Fatture/autofatture</a></li>
+        <li><a href="stampa-estrazione-dati-fatture-floppy.html">Stampa /estrazione dati fatture floppy</a></li>
+        <li><a href="stampa-estrazione-dati-fatture-su-pc.html">Stampa /estrazione dati fatture su pc</a></li>
+        <li><a href="contabilizzazione-fatture-autofatture.html">Contabilizzazione fatture/autofatture</a></li>
+        <li><a href="parametri-campagne-produzione-latte.html">Parametri campagne produzione latte</a></li>
+        <li><a href="interroga-partite-e-schede.html">Interroga partite e schede</a></li>
+        <li><a href="manutenzione-partitario.html">Manutenzione partitario</a></li>
+        <li><a href="stampa-movimenti-magazzino.html">Stampa movimenti magazzino</a></li>
+        <li><a href="pagamenti-a-fornitori.html">Pagamenti a fornitori</a></li>
     </ul>
 
 </body>
