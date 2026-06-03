@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>GL0701 - Creazione Fatture Del Latte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
     <style>
         body {
             background-color: #ffffff;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 16px;
+            /* Applicato Manrope globale con peso bold predefinito richiesto dal tuo stile */
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
             color: #000000;
             margin: 20px;
         }
 
         .window-container {
             width: 920px;
-            background-color: #ffffff; /* Sfondo bianco richiesto */
+            background-color: #ffffff;
             border: 2px solid #a0a0a0;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
@@ -24,8 +29,7 @@
             color: #404040;
             padding: 5px 10px;
             font-size: 12px;
-            font-family: Arial, sans-serif;
-            font-weight: normal;
+            font-weight: 500;
         }
 
         .window-content {
@@ -34,12 +38,12 @@
 
         /* Titolo Principale della Scheda */
         .main-title {
-            font-family: Arial, sans-serif;
             font-size: 22px;
             color: #0284c7;
             margin-bottom: 20px;
             border-bottom: 2px solid #0284c7;
             padding-bottom: 5px;
+            font-weight: 800;
         }
 
         /* Intestazioni evidenziate in Azzurro */
@@ -48,9 +52,10 @@
             color: #ffffff;
             padding: 2px 8px;
             display: inline-block;
-            font-size: 16px;
+            font-size: 15px;
             letter-spacing: 2px;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .flex-row {
@@ -68,11 +73,12 @@
         input[type="text"] {
             background-color: #ffffff;
             border: 1px solid #b0b0b0;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 2px 4px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 2px 6px;
             color: #000000;
+            border-radius: 3px;
         }
 
         input.center { text-align: center; }
@@ -107,7 +113,7 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .btn-blue {
@@ -233,7 +239,7 @@
             <div class="blue-block"></div>
             <div>
                 <span class="btn-blue">Conferma (S/N):</span>
-                <input type="text" style="width: 20px; margin-left: 5px; background-color: #0284c7; color: #ffffff; border: none; text-align: center;">
+                <input type="text" style="width: 20px; margin-left: 5px; background-color: #0284c7; color: #ffffff; border: none; text-align: center; font-family: 'Manrope', sans-serif;">
                 <span class="btn-blue" style="margin-left: 5px; padding: 2px 6px;">?</span>
             </div>
         </div>
